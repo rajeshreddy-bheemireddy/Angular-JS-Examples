@@ -1,0 +1,40 @@
+<article>
+    <header>
+        <h4>List of favorite foods</h4>
+    </header>
+    <section>
+        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" ng-if="FavCtrl.favorites.length > 0">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <td>NDB No</td>
+                        <td style="width:80%;">Name</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="fav in FavCtrl.favorites">
+                        <td ng-bind="fav.ndbno"></td>
+                        <td ng-bind="fav.name" style="width:80%;"></td>
+                        <td>
+                            <button class="btn btn-primary" ng-click="FavCtrl.viewFav(fav)">
+                                <i class="glyphicon glyphicon-pencil"></i>
+                            </button>
+                            <button class="btn btn-danger" ng-click="FavCtrl.removeFav(fav)">
+                                <i class="glyphicon glyphicon-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" ng-if="!FavCtrl.favorites.length > 0">
+            <p class="text-center">There were no favorite foods found</p>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</article>
+
+

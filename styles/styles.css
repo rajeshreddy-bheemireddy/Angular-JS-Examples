@@ -1,0 +1,28 @@
+.form-group{
+    position: relative;
+    padding-top: 20px;
+}
+
+input[name="author"] + label{
+    position: absolute;
+    top: 26px;
+    left: 6px;
+    cursor: auto;
+    font-size: 14px;
+
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+input[name="author"]:focus + label,
+input[name="author"]:valid + label{
+    top: 0;
+    font-size: 12px;
+}
+
+
+footer{
+    margin-bottom: 30px;
+}

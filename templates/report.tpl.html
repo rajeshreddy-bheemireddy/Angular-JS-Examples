@@ -1,0 +1,28 @@
+<article>
+    <header>
+        <h4>Basic Report</h4>
+        <div class="pull-left">
+            <dl class="dl-horizontal">
+                <dt>Name of the food:</dt>
+                <dd ng-bind="reportCtrl.food.name"></dd>
+                <dt>NDB No.:</dt>
+                <dd ng-bind="reportCtrl.food.ndbno"></dd>
+            </dl>
+        </div>
+
+        <div class="pull-right">
+            <a href="#" title="Mark it favorite" ng-click="reportCtrl.markFav($event,reportCtrl.food)" style="font-size:25px;">
+                <i class="glyphicon glyphicon-star-empty" ng-if="!reportCtrl.setFavFood"></i>
+                <i class="glyphicon glyphicon-star" ng-if="reportCtrl.setFavFood"></i>
+            </a>
+        </div>
+    </header>
+    <section>
+        <!--search results-->
+        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" ng-if="reportCtrl.reportGridOpt.data.length > 0">
+            <div id="reportGridOpt" ui-grid="reportCtrl.reportGridOpt" ui-grid-resize-columns ui-grid-auto-resize ui-grid-move-columns ui-grid-pagination ui-grid-selection ui-grid-pinning class="grid"></div>
+        </div>
+    </section>
+    <footer>
+    </footer>
+</article>

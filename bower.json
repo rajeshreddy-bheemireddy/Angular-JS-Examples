@@ -1,0 +1,27 @@
+{
+  "name": "hclTest",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-bootstrap": "^2.2.0",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "angular-ui-router": "ui-router#^0.3.2",
+    "angular-ui-grid": "3.2.7"
+  },
+  "resolutions": {
+    "angular": "1.5.8"
+  },
+  "dependencies": {
+    "angular-ui-grid": "^3.2.9"
+  }
+}
